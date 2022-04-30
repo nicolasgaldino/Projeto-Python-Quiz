@@ -4,7 +4,7 @@ Escolhe seu tipo de Quiz:
 [1] - Conhecimentos Gerais
 [2] - Revolução Russa
 [3] - Grandes Guerras Mundiais
-''')).strip()
+Digite sua escolha: ''')).strip()
 print('-' * 50)
 if nivel == '1':
   print('Quiz de Conhecimentos Gerais')
@@ -323,17 +323,14 @@ for perg_key, perg_value in perguntas.items():
     certas += 1
   else:
     erradas += 1
-
 num_perg = len(perguntas)
 porcent_acerto = certas / num_perg * 100
 porcent_erro = erradas / num_perg * 100
-
+print(f'Você acertou {certas} e errou {erradas}.')
+print(f'Você teve {porcent_acerto:.0f}% de acerto.')
 if porcent_acerto > 70:
-  print(f'Você acertou {certas}  e errou {erradas}.')
-  print(f'Você teve {porcent_acerto:.0f}% de acerto. Parabéns, você arrasou!')
+  print('Parabéns, você mandou muito bem!')
 elif porcent_acerto < 30:
-  print(f'Você acertou {certas}  e errou {erradas}.')
-  print(f'Você teve {porcent_acerto:.0f}% de acerto. Tenho certeza que na próxima você vai se sair melhor.')
-elif porcent_acerto <= 69 and porcent_acerto >= 31:
-  print(f'Você acertou {certas}  e errou {erradas}.')
-  print(f'Você teve {porcent_acerto:.0f}% de acerto. Você ficou na média.')
+  print('Tenho certeza que na próxima você se sairá melhor.')
+else:
+  print('Ficou na média, mas tenho certeza que na próxima você se saíra melhor.')
