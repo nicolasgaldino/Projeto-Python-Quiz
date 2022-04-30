@@ -1,11 +1,11 @@
-print('-' * 50)
+print('-' * 100)
 nivel = str(input('''
-Escolhe seu tipo de Quiz:
+Escolha seu tipo de Quiz:
 [1] - Conhecimentos Gerais
 [2] - Revolução Russa
 [3] - Grandes Guerras Mundiais
 Digite sua escolha: ''')).strip()
-print('-' * 50)
+print('-' * 100)
 if nivel == '1':
   print('Quiz de Conhecimentos Gerais')
   perguntas = {
@@ -308,24 +308,23 @@ elif nivel == '3':
       'resposta_certa': 'a',
     },
   }
-print('-' * 50)
+print('-' * 100)
 certas = 0
 erradas = 0
 for perg_key, perg_value in perguntas.items():
   print(f'{perg_key}: {perg_value["pergunta"]}')
   print('Escolha uma das opções abaixo:')
-  print('-' * 50)
+  print('-' * 100)
   for resposta_key, resposta_value in perg_value['respostas'].items():
     print(f'{resposta_key}: {resposta_value}')
   resposta_usuario = str(input('Sua Resposta: ')).lower().strip()
-  print('-' * 50)
+  print('-' * 100)
   if resposta_usuario == perg_value['resposta_certa']:
     certas += 1
   else:
-    erradas += 1
+    erradas += 11
 num_perg = len(perguntas)
 porcent_acerto = certas / num_perg * 100
-porcent_erro = erradas / num_perg * 100
 print(f'Você acertou {certas} e errou {erradas}.')
 print(f'Você teve {porcent_acerto:.0f}% de acerto.')
 if porcent_acerto > 70:
