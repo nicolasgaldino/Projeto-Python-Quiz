@@ -322,7 +322,7 @@ for perg_key, perg_value in perguntas.items():
   if resposta_usuario == perg_value['resposta_certa']:
     certas += 1
   else:
-    erradas += 11
+    erradas += 1
 num_perg = len(perguntas)
 porcent_acerto = certas / num_perg * 100
 print(f'Você acertou {certas} e errou {erradas}.')
@@ -332,4 +332,4 @@ if porcent_acerto > 70:
 elif porcent_acerto < 30:
   print('Tenho certeza que na próxima você se sairá melhor.')
 else:
-  print('Ficou na média, mas tenho certeza que na próxima você se saíra melhor.')
+  print('Ficou na média, mas tenho certeza que na próxima você se saírá melhor.')
